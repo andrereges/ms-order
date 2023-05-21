@@ -1,0 +1,17 @@
+spring:
+
+  application:
+    name: @project.name@
+    version: @project.version@
+
+  mvc.favicon.enabled: false
+
+  profiles:
+    active: ${APP_PROFILE:dev}
+    include:
+      - application-test
+      - application-dev
+      - application-prod
+
+  main:
+    banner-mode: CONSOLE
