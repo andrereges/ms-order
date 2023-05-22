@@ -51,7 +51,7 @@ resource "aws_route_table_association" "ms_order_rtb_ass" {
 }
 
 resource "aws_instance" "ms_order_ec2_inst" {
-  instance_type          = "t2.micro"
+  instance_type          = "t2.small"
   key_name               = aws_key_pair.ms_order_key.id
   vpc_security_group_ids = [aws_security_group.ms_order_sg.id]
   subnet_id              = aws_subnet.ms_order_subnet_public_1a.id
