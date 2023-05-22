@@ -28,7 +28,7 @@
 #clone your project from git repository
     git clone https://github.com/andrereges/ms-order.git
     cd ms-order
-    git checkout master
+    git checkout main
     git pull
     cd deploy/docker
 
