@@ -36,3 +36,10 @@ build/
 dev_environment/postgres
 dev_environment/rabbitmq
 dev_environment/rabbitmq.conf
+
+### Deploy Terraform ###
+deploy/terraform/.terraform
+deploy/terraform/.terraform.lock.hcl
+deploy/terraform/terraform.tfstate
+deploy/terraform/terraform.tfstate.backup
+deploy/variables.tf
