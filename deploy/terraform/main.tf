@@ -68,3 +68,20 @@ resource "aws_instance" "ms_order_ec2_inst" {
   }
 
 }
+
+resource "aws_db_instance" "ms_order_db" {
+  instance_class = "db.t2.micro"
+  allocated_storage = 5
+  max_allocated_storage = 10
+  engine = "aurora-postgresql"
+  engine_version = "13"
+  db_name = "msorder"
+  username = "admin"
+  password = "admin"
+  skip_final_snapshot = true
+}
+
+resource "aws_db_subnet_group" "ms_order_subnet_gp" {
+  name = "ms_order_subnet_gp"
+  subnet_ids = [aws_subnet.ms_order_subnet_public_1a.id]
+}

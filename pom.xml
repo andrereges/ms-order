@@ -83,12 +83,6 @@
 
 	<profiles>
 		<profile>
-			<id>qa</id>
-			<properties>
-				<activatedProperties>qa</activatedProperties>
-			</properties>
-		</profile>
-		<profile>
 			<id>prod</id>
 			<properties>
 				<activatedProperties>prod</activatedProperties>

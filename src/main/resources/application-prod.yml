@@ -1,18 +1,2 @@
 server:
   port: ${SERVER_PORT}
-
-spring:
-
-  application:
-    name: @project.name@
-    version: @project.version@
-
-  mvc.favicon.enabled: false
-
-  config:
-    activate:
-      on-profile:
-        - prod
-
-  main:
-    banner-mode: CONSOLE
