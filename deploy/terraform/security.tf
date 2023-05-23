@@ -27,6 +27,42 @@ resource "aws_security_group_rule" "ms_order_sgr_http_in" {
   cidr_blocks       = ["0.0.0.0/0"]
 }
 
+resource "aws_security_group_rule" "ms_order_sgr_https_in" {
+  from_port         = 443
+  to_port           = 443
+  protocol          = "tcp"
+  security_group_id = aws_security_group.ms_order_sg.id
+  type              = "ingress"
+  cidr_blocks       = ["0.0.0.0/0"]
+}
+
+resource "aws_security_group_rule" "ms_order_sgr_db_in" {
+  from_port         = 5432
+  to_port           = 5432
+  protocol          = "tcp"
+  security_group_id = aws_security_group.ms_order_sg.id
+  type              = "ingress"
+  cidr_blocks       = ["0.0.0.0/0"]
+}
+
+resource "aws_security_group_rule" "ms_order_sgr_broker_in" {
+  from_port         = 5672
+  to_port           = 5672
+  protocol          = "tcp"
+  security_group_id = aws_security_group.ms_order_sg.id
+  type              = "ingress"
+  cidr_blocks       = ["0.0.0.0/0"]
+}
+
+resource "aws_security_group_rule" "ms_order_sgr_broker_management_in" {
+  from_port         = 15672
+  to_port           = 15672
+  protocol          = "tcp"
+  security_group_id = aws_security_group.ms_order_sg.id
+  type              = "ingress"
+  cidr_blocks       = ["0.0.0.0/0"]
+}
+
 resource "aws_security_group_rule" "ms_order_sgr_ssh_in" {
   from_port         = 22
   to_port           = 22
