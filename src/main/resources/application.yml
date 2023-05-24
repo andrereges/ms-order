@@ -1,17 +1,20 @@
 server:
   port: 8080
+  shutdown: graceful
 
 spring:
 
   application:
-    name: @project.name@
-    version: @project.version@
-
-  mvc.favicon.enabled: false
+    name: ms-order
 
   profiles:
+    active: ${ACTIVE_PROFILE:dev}
     include:
+      - application-test
+      - application-dev
       - application-prod
+
+  mvc.favicon.enabled: false
 
   main:
     banner-mode: CONSOLE

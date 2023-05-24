@@ -12,6 +12,7 @@ services:
       TZ: "America/Sao_Paulo"
       SERVER_PORT: 8080
       DATABASE_URL: jdbc:postgres://admin:admin@db:5432/msorder
+      ACTIVE_PROFILE: prod
     volumes:
       - ../target:/opt/app
     links:
@@ -54,8 +55,8 @@ services:
       - ./postgres/data:/var/lib/postgresql/data
     environment:
       TZ: "America/Sao_Paulo"
-      POSTGRES_USER: "admin"
-      POSTGRES_PASSWORD: "admin"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
       POSTGRES_DB: "msorder"
     networks:
       - docker-network
