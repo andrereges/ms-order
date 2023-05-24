@@ -35,5 +35,5 @@
 #run your docker compose file
     docker-compose -f docker-compose-prod.yml up -d
 
-run creation database
+#run creation database
     docker exec -it postgres-db psql -U postgres -c 'CREATE DATABASE msorder;'
