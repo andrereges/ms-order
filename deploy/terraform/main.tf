@@ -68,25 +68,3 @@ resource "aws_instance" "ms_order_ec2_inst" {
   }
 
 }
-
-resource "aws_db_instance" "ms_order_db" {
-  instance_class = "db.t3.micro"
-  allocated_storage = 5
-  license_model = ""
-  max_allocated_storage = 10
-  storage_encrypted = false
-  multi_az = false
-  port     = "5432"
-  engine = "postgres"
-  engine_version = "13.5"
-  db_name = "msorder"
-  username = "admin"
-  password = "admin"
-  skip_final_snapshot = true
-  vpc_security_group_ids = [aws_security_group.ms_order_sg.id]
-}
-
-#resource "aws_db_subnet_group" "ms_order_subnet_gp" {
-#  name = "ms_order_subnet_gp"
-#  subnet_ids = [aws_subnet.ms_order_subnet_public_1a.id]
-#}
