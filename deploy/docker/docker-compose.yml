@@ -1,6 +1,7 @@
 version: "3"
 
 services:
+
   broker:
     container_name: 'rabbitmq'
     image: rabbitmq:3-management-alpine
@@ -21,6 +22,7 @@ services:
       - "./rabbitmq/data/:/var/lib/rabbitmq"
     networks:
       - docker-network
+
   db:
     container_name: postgres-db
     image: postgres

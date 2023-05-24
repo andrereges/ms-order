@@ -8,7 +8,7 @@ Este sistema consume dados de uma fila *message broker* em formato JSON e será 
 {
   "codigoPedido": 1001,
   "codigoCliente": 1,
-  "items": [
+  "itens": [
     {
       "produto": "lápis",
       "quantidade": 100,
@@ -28,3 +28,9 @@ Este sistema consume dados de uma fila *message broker* em formato JSON e será 
 - Valor total do pedido
 - Quantidade de pedidos por cliente
 - Lista de pedidos realizados por cliente
+
+###Swagger do projeto
+
+Para acessar o swagger do projeto é necessário substituir URL_SERVER pela URL do servidor. 
+
+http://URL_SERVER/swagger-ui/index.html
