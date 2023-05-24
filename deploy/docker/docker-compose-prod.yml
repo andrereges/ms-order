@@ -12,7 +12,6 @@ services:
       TZ: "America/Sao_Paulo"
       SERVER_PORT: 8080
       DATABASE_URL: jdbc:postgres://postgres:postgres@db:5432/msorder
-      DATABASE_USERNAME:
       ACTIVE_PROFILE: prod
       RABBITMQ_HOST: broker
       RABBITMQ_PORT: 5672
