@@ -8,11 +8,11 @@ spring:
     name: ms-order
 
   profiles:
-    active: ${ACTIVE_PROFILE:dev}
+    active: ${ACTIVE_PROFILE:test}
     include:
-      - application-test
-      - application-dev
-      - application-prod
+    - application-test
+    - application-dev
+    - application-prod
 
   mvc.favicon.enabled: false
 
