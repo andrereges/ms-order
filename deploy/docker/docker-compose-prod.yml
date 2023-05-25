@@ -48,10 +48,8 @@ services:
       - "5672:5672"
       - "15672:15672"
     volumes:
+      - "./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf"
       - "./rabbitmq/data/:/var/lib/rabbitmq"
-      - "./rabbitmq/rabbitmq-enabled-plugins:/etc/rabbitmq/enabled_plugins"
-      - "./rabbitmq/rabbitmq.config:/etc/rabbitmq/rabbitmq.config"
-      - "./rabbitmq/rabbitmq-defs.json:/etc/rabbitmq/rabbitmq-defs.json"
     networks:
       - docker-network
 
